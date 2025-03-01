@@ -5,33 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AU Racing Formula</title>
     <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+        /* Sayfa genel ayarları */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        .container {
-            padding: 50px;
+
+        /* Sayfanın tamamını kapsayan arka plan resmi */
+        body {
+            background: url('images/auracingformulapage.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
-            display: block;
-            margin: auto;
+
+        /* Başlık ortada ve büyük olacak */
+        h1 {
+            font-size: 3rem;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to AU Racing Formula</h1>
-        
-        <!-- Resmi Buraya Ekledik -->
-        <img src="images/profile.jpg" alt="Profile Image">
-
-        <p>This is the homepage of AU Racing Formula.</p>
-    </div>
+    <h1>AU Racing Formula</h1>
 </body>
 </html>
+
