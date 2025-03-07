@@ -16,6 +16,7 @@
         /* Tüm Sayfa Yapısı */
         html, body {
             scroll-behavior: smooth;  /* Yumuşak kaydırma */
+            overflow-x: hidden;
         }
 
         /* Ortak Stil: Arka Plan Resimleri Optimize */
@@ -30,6 +31,7 @@
             background-size: cover;  /* Resim ekrana tam sığsın */
             background-position: center;
             background-repeat: no-repeat;
+            width: 100%;
         }
 
         /* İlk Sayfa (Giriş Ekranı) */
@@ -45,6 +47,7 @@
         /* Üçüncü Sayfa (Katılım ve Instagram Bölümü) */
         .content {
             background-image: url('images/secondscreen.png');
+            flex-direction: column;
         }
 
         /* Instagram Linki ve Katılım Formu - Buton Görünümü */
@@ -98,7 +101,7 @@
         /* Mobil Cihazlar İçin Özel Ayarlar */
         @media (max-width: 768px) {
             .section {
-                background-size: cover;  /* Mobilde tam ekran yapsın */
+                background-size: contain;  /* Mobilde tam ekran yapsın */
             }
 
             .form-container, .social {
@@ -124,7 +127,7 @@
         <!-- Katılım Formu -->
         <div class="form-container">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScLx3demo5vxpho9pK50by1qLfq1pVE9rCk8xXN-CFpIJd5qg/viewform?usp=header"
-               target="_blank" class="form-button">Katılım Formu İçin Tıklayın</a>
+               target="_blank" class="form-button">Join Now</a>
         </div>
     </div>
 
