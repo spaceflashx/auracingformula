@@ -15,56 +15,36 @@
 
         /* Tüm Sayfa Yapısı */
         html, body {
-            scroll-behavior: smooth;  /* Yumuşak kaydırma efekti */
+            scroll-behavior: smooth;  /* Yumuşak kaydırma */
         }
 
-        /* İlk Sayfa (Hero Section) */
-        .hero {
-            background: url('images/newphotopage.png') no-repeat center center;
-            background-size: cover;
-            height: 100vh;  /* Ekranın tamamını kaplasın */
+        /* Ortak Stil: Arka Plan Resimleri Optimize */
+        .section {
+            height: 100vh; /* Ekranın tamamını kaplasın */
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            background-size: cover;  /* Resim ekrana tam sığsın */
+            background-position: center;
+            background-repeat: no-repeat;
         }
 
-        /* Ok İkonu - Kaydırma İpuçları */
-        .scroll-down {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 2rem;
-            color: white;
-            text-decoration: none;
-            animation: bounce 2s infinite;
+        /* İlk Sayfa (Giriş Ekranı) */
+        .hero {
+            background-image: url('images/newphotopage.png');
         }
 
-        /* Aşağı Kaydırma Animasyonu */
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
+        /* İkinci Sayfa (Yeni F1 Fotoğrafı) */
+        .f1page {
+            background-image: url('images/f1page.png');
         }
 
-        /* İkinci Sayfa (Kaydırarak Geçilen İçerik) */
+        /* Üçüncü Sayfa (Katılım ve Instagram Bölümü) */
         .content {
-            height: 100vh; /* Ekranın tamamını kaplasın */
-            background: url('images/secondscreen.png') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 50px;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            background-image: url('images/secondscreen.png');
         }
 
         /* Instagram Linki ve Katılım Formu - Buton Görünümü */
@@ -117,9 +97,8 @@
 
         /* Mobil Cihazlar İçin Özel Ayarlar */
         @media (max-width: 768px) {
-            .hero, .content {
+            .section {
                 background-size: cover;  /* Mobilde tam ekran yapsın */
-                height: 100vh;  /* Boşlukları engelle */
             }
 
             .form-container, .social {
@@ -131,12 +110,13 @@
 <body>
 
     <!-- Giriş (Hero) Kısmı -->
-    <div class="hero">
-        <a href="#content" class="scroll-down">⬇️</a>  <!-- Aşağı kaydır butonu -->
-    </div>
+    <div class="section hero"></div>
 
-    <!-- Kaydırılabilir İçerik -->
-    <div id="content" class="content">
+    <!-- İkinci Sayfa (F1 Fotoğrafı) -->
+    <div class="section f1page"></div>
+
+    <!-- Üçüncü Sayfa (Katılım ve Instagram Bölümü) -->
+    <div class="section content">
         <div class="social">
             <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
         </div>
