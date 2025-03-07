@@ -13,18 +13,17 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Sayfa Gövdesi - Beyaz Boşlukları Kaldır */
-        body {
-            overflow: hidden;  /* Sayfa kaydırmasını kaldır */
+        /* Tüm Sayfa Yapısı */
+        html, body {
+            scroll-behavior: smooth;  /* Yumuşak kaydırma efekti */
         }
 
-        /* Giriş Sayfası (İlk Arka Plan) */
+        /* İlk Sayfa (Hero Section) */
         .hero {
             background: url('images/newphotopage.png') no-repeat center center;
-            background-size: cover;  /* Resmi tam ekran yap */
+            background-size: cover;
             height: 100vh;  /* Ekranın tamamını kaplasın */
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
@@ -32,12 +31,33 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Kaydırılabilir İçerik Alanı (İkinci Sayfa) */
+        /* Ok İkonu - Kaydırma İpuçları */
+        .scroll-down {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            animation: bounce 2s infinite;
+        }
+
+        /* Aşağı Kaydırma Animasyonu */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* İkinci Sayfa (Kaydırarak Geçilen İçerik) */
         .content {
-            width: 100%;
-            height: 100vh;
+            height: 100vh; /* Ekranın tamamını kaplasın */
             background: url('images/secondscreen.png') no-repeat center center;
-            background-size: cover;  /* Resmi tam ekran yap */
+            background-size: cover;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -112,11 +132,11 @@
 
     <!-- Giriş (Hero) Kısmı -->
     <div class="hero">
-        <!-- Burada herhangi bir yazı istemiyorsan, içini boş bırakabilirsin -->
+        <a href="#content" class="scroll-down">⬇️</a>  <!-- Aşağı kaydır butonu -->
     </div>
 
     <!-- Kaydırılabilir İçerik -->
-    <div class="content">
+    <div id="content" class="content">
         <div class="social">
             <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
         </div>
