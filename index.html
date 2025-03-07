@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!D<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,31 +55,28 @@
             background: rgba(255, 255, 255, 0.5);
         }
 
-        /* Katılım Formu */
+        /* Katılım Formu Linki */
         .form-container {
             background: rgba(255, 255, 255, 0.2);
             padding: 20px;
             border-radius: 10px;
             margin-top: 30px;
             width: 50%;
+            text-align: center;
         }
 
-        .form-container input, .form-container button {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-
-        .form-container button {
+        .form-container a {
+            display: inline-block;
             background: #ff6b6b;
             color: white;
-            cursor: pointer;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: 0.3s;
         }
 
-        .form-container button:hover {
+        .form-container a:hover {
             background: #ff3b3b;
         }
 
@@ -106,9 +103,7 @@
 <body>
 
     <!-- Giriş (Hero) Kısmı -->
-    <div class="hero">
-        
-    </div>
+    <div class="hero"></div>
 
     <!-- Kaydırılabilir İçerik -->
     <div class="content">
@@ -117,13 +112,13 @@
             <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
         </div>
 
-        <!-- Katılım Formu -->
+        <!-- Katılım Formu Linki -->
         <div class="form-container">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <button type="submit">Sign Up</button>
-            </form>
+            <h3>Katılım Formu</h3>
+            <p>Takımımıza katılmak için aşağıdaki bağlantıya tıklayın.</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScLx3demo5vxpho9pK50by1qLfq1pVE9rCk8xXN-CFpIJd5qg/viewform?usp=header" target="_blank">
+                Katılım Formunu Doldur
+            </a>
         </div>
     </div>
 
@@ -133,9 +128,10 @@
         <div class="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
-            <a href="girgircompanyformula@gmail.com">Contact Us</a>
+            <a href="mailto:girgircompanyformula@gmail.com">Contact Us</a>
         </div>
     </footer>
 
 </body>
 </html>
+
