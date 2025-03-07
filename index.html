@@ -13,13 +13,12 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Tüm Sayfa Yapısı */
         html, body {
             scroll-behavior: smooth;  /* Yumuşak kaydırma */
             overflow-x: hidden;
         }
 
-        /* Ortak Stil: Arka Plan Resimleri Optimize */
+        /* Sayfa Bölümleri */
         .section {
             height: 100vh; /* Ekranın tamamını kaplasın */
             display: flex;
@@ -28,36 +27,57 @@
             text-align: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            background-size: cover;  /* Resim ekrana tam sığsın */
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             width: 100%;
-        }
-
-        /* İlk Sayfa (Giriş Ekranı) */
-        .hero {
-            background-image: url('images/newphotopage.png');
-        }
-
-        /* İkinci Sayfa (Yeni F1 Fotoğrafı) */
-        .f1page {
-            background-image: url('images/f1page.png');
-        }
-
-        /* Üçüncü Sayfa (Katılım ve Instagram Bölümü) */
-        .content {
-            background-image: url('images/secondscreen.png');
             flex-direction: column;
         }
 
-        /* Instagram Linki ve Katılım Formu - Buton Görünümü */
+        /* Arka Plan Resimleri */
+        #hero {
+            background-image: url('images/newphotopage.png');
+        }
+
+        #about {
+            background-image: url('images/f1page.png');
+        }
+
+        #join {
+            background-image: url('images/secondscreen.png');
+        }
+
+        /* Menü Çubuğu */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ff6b6b;
+        }
+
+        /* Katılım Formu ve Instagram Butonu */
         .form-container, .social {
             background: rgba(255, 255, 255, 0.2);
             padding: 20px;
             border-radius: 10px;
-            margin-top: 30px;
             width: 50%;
             text-align: center;
+            margin: 20px 0;
         }
 
         .form-container a, .social a {
@@ -100,10 +120,6 @@
 
         /* Mobil Cihazlar İçin Özel Ayarlar */
         @media (max-width: 768px) {
-            .section {
-                background-size: contain;  /* Mobilde tam ekran yapsın */
-            }
-
             .form-container, .social {
                 width: 80%;
             }
@@ -112,22 +128,35 @@
 </head>
 <body>
 
+    <!-- Menü Çubuğu -->
+    <div class="navbar">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#join">Join</a>
+    </div>
+
     <!-- Giriş (Hero) Kısmı -->
-    <div class="section hero"></div>
+    <div id="hero" class="section">
+        <h1>Welcome to AU Racing Formula</h1>
+    </div>
 
-    <!-- İkinci Sayfa (F1 Fotoğrafı) -->
-    <div class="section f1page"></div>
+    <!-- Hakkında (About) Kısmı -->
+    <div id="about" class="section">
+        <h2>About Our Project</h2>
+        <p>We are a team of engineers and students from Ankara University working on building a Formula racing car.</p>
+    </div>
 
-    <!-- Üçüncü Sayfa (Katılım ve Instagram Bölümü) -->
-    <div class="section content">
+    <!-- Katılım ve Instagram Bölümü -->
+    <div id="join" class="section">
+        <h2>Join Us</h2>
+
         <div class="social">
             <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
         </div>
 
-        <!-- Katılım Formu -->
         <div class="form-container">
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScLx3demo5vxpho9pK50by1qLfq1pVE9rCk8xXN-CFpIJd5qg/viewform?usp=header"
-               target="_blank" class="form-button">Join Now</a>
+               target="_blank">Join Now</a>
         </div>
     </div>
 
