@@ -15,9 +15,9 @@
 
         /* Giriş Sayfası (İlk Arka Plan) */
         .hero {
-            background: url('images/newphotopage.png') no-repeat center center fixed;
+            background: url('images/newphotopage.png') no-repeat center center;
             background-size: cover;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -31,7 +31,7 @@
         .content {
             width: 100%;
             min-height: 100vh;
-            background: url('images/secondscreen.png') no-repeat center center fixed;
+            background: url('images/secondscreen.png') no-repeat center center;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -42,74 +42,34 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* Instagram ve Join Us Bölümü - Katılım Formu Tasarımına Benzer */
-        .info-box {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            width: 50%;
-            margin-bottom: 20px;
-        }
-
-        .info-box h2 {
-            margin-bottom: 10px;
-        }
-
-        .info-box a {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.2rem;
-            transition: 0.3s;
-        }
-
-        .info-box a:hover {
-            background: #ff3b3b;
-        }
-
-        /* Footer */
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
+        /* Mobil Cihazlar İçin Özel Ayarlar */
+        @media (max-width: 768px) {
+            .hero, .content {
+                background-size: contain;  /* Resmi kesmeden, tam olarak ekrana sığdır */
+                background-position: center top;  /* Ortaya hizala */
+                min-height: 100vh;  /* Mobilde tam ekran görünüm sağla */
+            }
         }
     </style>
 </head>
 <body>
 
     <!-- Giriş (Hero) Kısmı -->
-    <div class="hero"></div>
+    <div class="hero">
+        <!-- Burada herhangi bir yazı istemiyorsan, içini boş bırakabilirsin -->
+    </div>
 
     <!-- Kaydırılabilir İçerik -->
     <div class="content">
-        <!-- Join Us Bölümü -->
-        <div class="info-box">
-            <h2>Join Us</h2>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScLx3demo5vxpho9pK50by1qLfq1pVE9rCk8xXN-CFpIJd5qg/viewform?usp=header" target="_blank">
-                Katılım Formunu Doldur
-            </a>
+        <h2>Join Us</h2>
+        <div class="social">
+            <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
         </div>
 
-        <!-- Instagram Bölümü -->
-        <div class="info-box">
-            <h2>Follow us on Instagram</h2>
-            <a href="https://instagram.com/auracingfs" target="_blank">Instagram'a Git</a>
+        <!-- Katılım Formu -->
+        <div class="form-container">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScLx3demo5vxpho9pK50by1qLfq1pVE9rCk8xXN-CFpIJd5qg/viewform?usp=header"
+               target="_blank" class="form-button">Katılım Formu İçin Tıklayın</a>
         </div>
     </div>
 
