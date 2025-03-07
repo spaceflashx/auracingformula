@@ -14,20 +14,20 @@
         }
 
         html, body {
-            scroll-behavior: smooth;
+            scroll-behavior: smooth;  /* Yumuşak kaydırma */
             overflow-x: hidden;
         }
 
         /* Sayfa Bölümleri */
         .section {
-            min-height: 100vh;
+            height: 100vh; /* Tam ekran */
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            background-size: contain;  /* Resimleri kırpmadan göster */
+            background-size: cover;  /* Tam ekran */
             background-position: center;
             background-repeat: no-repeat;
             width: 100%;
@@ -71,19 +71,6 @@
 
         .navbar a:hover {
             color: #ff6b6b;
-        }
-
-        /* Mobil İçin Menü Çubuğu */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 5px;
-            }
-
-            .navbar a {
-                font-size: 0.9rem;
-                padding: 8px;
-            }
         }
 
         /* Katılım Formu ve Instagram Butonu */
@@ -133,19 +120,6 @@
 
         .footer-links a:hover {
             text-decoration: underline;
-        }
-
-        /* Mobil İçin Özel Ayarlar */
-        @media (max-width: 768px) {
-            .section {
-                min-height: 90vh;
-                padding: 30px 0;
-                background-size: contain;  /* Mobilde resimlerin tam görünmesini sağlar */
-            }
-
-            .form-container, .social {
-                width: 85%;
-            }
         }
     </style>
 </head>
