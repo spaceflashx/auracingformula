@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AU Racing Formula</title>
     <style>
-        /* Genel Sayfa Ayarları */
+        /* BURAYA YAPIŞTIR */
+        
+        /* Genel Ayarlar */
         * {
             margin: 0;
             padding: 0;
@@ -14,13 +16,13 @@
         }
 
         html, body {
-            scroll-behavior: smooth;  /* Yumuşak kaydırma */
+            scroll-behavior: smooth;
             overflow-x: hidden;
         }
 
         /* Sayfa Bölümleri */
         .section {
-            height: 100vh; /* Ekranın tamamını kaplasın */
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -52,43 +54,59 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            padding: 15px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px;
             text-align: center;
             z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             transition: 0.3s;
+            padding: 10px;
         }
 
         .navbar a:hover {
             color: #ff6b6b;
         }
 
+        /* Mobil İçin Menü Çubuğu */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 5px;
+            }
+
+            .navbar a {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+        }
+
         /* Katılım Formu ve Instagram Butonu */
         .form-container, .social {
             background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            width: 50%;
+            width: 60%;
             text-align: center;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         .form-container a, .social a {
             display: block;
             width: 100%;
-            margin: 10px 0;
-            padding: 15px;
+            margin: 8px 0;
+            padding: 12px;
             border: none;
             border-radius: 5px;
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: white;
             text-decoration: none;
             background: #ff6b6b;
@@ -104,24 +122,30 @@
             background: black;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 15px;
             width: 100%;
+            font-size: 0.9rem;
         }
 
         .footer-links a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 8px;
         }
 
         .footer-links a:hover {
             text-decoration: underline;
         }
 
-        /* Mobil Cihazlar İçin Özel Ayarlar */
+        /* Mobil İçin Özel Ayarlar */
         @media (max-width: 768px) {
+            .section {
+                height: auto;
+                padding: 50px 0;
+            }
+
             .form-container, .social {
-                width: 80%;
+                width: 85%;
             }
         }
     </style>
@@ -136,14 +160,10 @@
     </div>
 
     <!-- Giriş (Hero) Kısmı -->
-    <div id="hero" class="section">
-        
-    </div>
+    <div id="hero" class="section"></div>
 
     <!-- Hakkında (About) Kısmı -->
-    <div id="about" class="section">
-        
-    </div>
+    <div id="about" class="section"></div>
 
     <!-- Katılım ve Instagram Bölümü -->
     <div id="join" class="section">
