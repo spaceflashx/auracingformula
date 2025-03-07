@@ -13,35 +13,34 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Arka plan resmi */
-        body {
-            background: url('images/auracing.jpeg') no-repeat center center fixed;
+        /* Sayfa Arka Planı (Giriş Resmi) */
+        .hero {
+            background: url('images/auracing.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-        }
-
-        /* Giriş Kısmı */
-        .hero {
             text-align: center;
             color: white;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            margin-top: 100px;
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+        /* Kaydırılabilir İçerik Alanı */
+        .content {
+            width: 100%;
+            min-height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            color: white;
         }
 
         /* Instagram Linki */
-        .social {
-            margin-top: 20px;
-        }
-
         .social a {
             color: white;
             text-decoration: none;
@@ -62,6 +61,7 @@
             padding: 20px;
             border-radius: 10px;
             margin-top: 30px;
+            width: 50%;
         }
 
         .form-container input, .form-container button {
@@ -90,11 +90,6 @@
             text-align: center;
             padding: 20px;
             width: 100%;
-            margin-top: auto;
-        }
-
-        .footer-links {
-            margin: 10px 0;
         }
 
         .footer-links a {
@@ -112,20 +107,24 @@
 
     <!-- Giriş (Hero) Kısmı -->
     <div class="hero">
-        <h1>Welcome to AU Racing Formula</h1>
-        <div class="social">
-            <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
-        </div>
+        <h1>AU Racing Formula</h1>
     </div>
 
-    <!-- Katılım Formu -->
-    <div class="form-container">
-        <h2 style="color: white; text-align: center;">Join Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <button type="submit">Sign Up</button>
-        </form>
+    <!-- Kaydırılabilir İçerik -->
+    <div class="content">
+        <h2>Join Us</h2>
+        <div class="social">
+            <a href="https://instagram.com/auracingst" target="_blank">Follow us on Instagram</a>
+        </div>
+
+        <!-- Katılım Formu -->
+        <div class="form-container">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
     </div>
 
     <!-- Footer -->
