@@ -3,22 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AU Racing Formula</title>
     <style>
-        /* Sayfa genel ayarları */
+        /* Genel Sayfa Ayarları */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
-        /* Sayfanın tamamını kapsayan arka plan resmi */
+        /* Arka plan resmi */
         body {
             background: url('images/auracingformulapage.jpeg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Giriş Kısmı */
+        .hero {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-top: 100px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Instagram Linki */
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Katılım Formu */
+        .form-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .form-container input, .form-container button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background: #ff6b6b;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background: #ff3b3b;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        .footer-links {
+            margin: 10px 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
+    <!-- Giriş (Hero) Kısmı -->
+    <div class="hero">
+        <h1>Welcome to AU Racing Formula</h1>
+        <div class="social">
+            <a href="https://instagram.com/auracingfs" target="_blank">Follow us on Instagram</a>
+        </div>
+    </div>
+
+    <!-- Katılım Formu -->
+    <div class="form-container">
+        <h2 style="color: white; text-align: center;">Join Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AU Racing Formula. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="girgircompanyformula@gmail.com">Contact Us</a>
+        </div>
+    </footer>
+
 </body>
 </html>
+
